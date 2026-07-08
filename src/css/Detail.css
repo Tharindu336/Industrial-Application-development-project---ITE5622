@@ -1,0 +1,346 @@
+.detail-page {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-page ::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.detail-main {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  flex-grow: 1;
+}
+
+.detail-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.detail-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .detail-layout {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .detail-layout {
+    gap: 6rem;
+  }
+}
+
+.detail-image-section {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .detail-image-section {
+    width: 60%;
+  }
+}
+
+.detail-image-wrapper {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: var(--color-surface-container-low);
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-image-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.detail-dot-active {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-on-primary);
+}
+
+.detail-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.detail-info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .detail-info-section {
+    width: 40%;
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-collection {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(80, 68, 65, 0.7);
+}
+
+.detail-title {
+  font-family: var(--font-headline);
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .detail-title {
+    font-size: 3.75rem;
+  }
+}
+
+.detail-price {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-on-surface-variant);
+  margin: 0;
+}
+
+.detail-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detail-option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-option-label {
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+.detail-colors {
+  display: flex;
+  gap: 1rem;
+}
+
+.detail-color-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.detail-color-btn.sandstone {
+  background-color: #e8c1b5;
+  box-shadow: 0 0 0 4px var(--color-surface), 0 0 0 6px var(--color-primary);
+}
+
+.detail-color-btn.earth {
+  background-color: #75574e;
+}
+
+.detail-color-btn.earth:hover {
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px rgba(117, 87, 78, 0.2);
+}
+
+.detail-color-btn.obsidian {
+  background-color: #1c1b1a;
+}
+
+.detail-color-btn.obsidian:hover {
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px rgba(117, 87, 78, 0.2);
+}
+
+.detail-size-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-guide-link {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(117, 87, 78, 0.3);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.detail-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-size-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.detail-size-btn:hover {
+  background-color: var(--color-primary-container);
+}
+
+.detail-size-btn.active {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.detail-cta-section {
+  padding-top: 1.5rem;
+}
+
+.detail-add-btn {
+  width: 100%;
+  color: var(--color-on-primary);
+  font-family: var(--font-label);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 20px 25px -5px rgba(117, 87, 78, 0.1), 0 10px 10px -5px rgba(117, 87, 78, 0.04);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.detail-add-btn:active {
+  transform: scale(0.98);
+}
+
+.detail-shipping-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgba(80, 68, 65, 0.6);
+  font-weight: 500;
+}
+
+.detail-accordions {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(212, 195, 190, 0.15);
+}
+
+.detail-accordion {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 195, 190, 0.15);
+}
+
+.detail-accordion-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.detail-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-accordion-title {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.detail-accordion-icon {
+  transition: transform 0.3s;
+}
+
+details[open] .detail-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.detail-accordion-content {
+  padding-top: 1rem;
+  color: var(--color-on-surface-variant);
+  line-height: 1.625;
+  font-size: 0.875rem;
+}
+
+.detail-accordion-content p {
+  margin-bottom: 1rem;
+}
+
+.detail-accordion-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-accordion-content.simple p {
+  margin: 0;
+}
